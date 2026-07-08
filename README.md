@@ -1,7 +1,9 @@
 # Hack Academy
 
-A hands-on curriculum for web application security and bug bounty skills — seven tracks, twenty-two
-levels, all running as a static site with no backend.
+A hands-on curriculum for web application security and bug bounty skills — eight tracks, thirty-one
+levels, all running as a static site with no backend. No prior coding or security knowledge assumed:
+Track 0 teaches the terminal, HTTP, HTML, DevTools, JSON, and SQL from scratch before anything else
+relies on them.
 
 **[Live site →](#)** _(filled in once GitHub Pages is enabled)_
 
@@ -10,12 +12,14 @@ levels, all running as a static site with no backend.
 Every "target" is a sandboxed simulation that runs entirely client-side, inside a
 `sandbox="allow-scripts"` iframe or a fake terminal — nothing here touches a real network or another
 person. That containment means it can teach the *mechanics* of each vulnerability class honestly, but
-it isn't a substitute for practicing against real (authorized) targets. Track 7, "Bug Bounty
+it isn't a substitute for practicing against real (authorized) targets. Track 8, "Bug Bounty
 Methodology," ends with exactly where to go next: PortSwigger Web Security Academy, OWASP Juice Shop,
 TryHackMe/HTB, and real bug bounty programs.
 
 ## Tracks
 
+0. **Foundations** — what a website/terminal/HTTP request even is, HTML, DevTools, cookies, JSON,
+   your first SQL query, URL-encoding. Zero assumed knowledge; everything else depends on this.
 1. **Recon & Footprinting** — WHOIS/DNS, search-engine dorking, content discovery
 2. **Injection** — SQL injection (auth bypass, UNION extraction), OS command injection
 3. **Cross-Site Scripting** — reflected, stored, DOM-based
@@ -56,5 +60,5 @@ whichever `type` (`terminal`, `webapp`, `answer`, or `reading`) it declares.
 
 ## Ethics
 
-Only use what you learn here against systems you have explicit authorization to test. See Track 7,
-Level 1 for a rundown of what "authorized" actually means.
+Only use what you learn here against systems you have explicit authorization to test. See Track 8
+("Bug Bounty Methodology"), Level 1 for a rundown of what "authorized" actually means.

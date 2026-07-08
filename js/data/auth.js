@@ -75,7 +75,10 @@ window.HACKACADEMY_TRACKS.auth = {
       tags: ["JWT", "Auth Bypass"],
       type: "webapp",
       briefing: `
-        <p>A JWT is three base64url segments — <code>header.payload.signature</code> — and it's
+        <p>A JWT ("JSON Web Token") is built from the JSON you learned in Foundations. It's three
+        base64url segments — <code>header.payload.signature</code> — where the header and payload
+        are just JSON objects, encoded so they're safe to put in a URL, then glued together with
+        dots. It's
         only trustworthy if the verifier actually checks the signature against an algorithm it
         expects. A long-running, real vulnerability class in JWT libraries: if the token's header
         claims <code>"alg":"none"</code>, some verifiers skip signature checking entirely, because

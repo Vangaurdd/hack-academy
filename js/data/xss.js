@@ -19,7 +19,9 @@ window.HACKACADEMY_TRACKS.xss = {
         the search box below reflects a <code>?q=</code> query-string parameter.</p>
         <p><strong>Gotcha:</strong> a literal <code>&lt;script&gt;</code> tag inserted via
         <code>innerHTML</code> will <em>not</em> execute — that's spec behavior, not a defense.
-        Real-world payloads use an event-handler vector instead, e.g. an image that fails to load:</p>
+        Real-world payloads instead reuse a tag and attribute the way you learned in Foundations
+        (<code>&lt;tagname attribute="value"&gt;</code>) — an <strong>event-handler attribute</strong>
+        like <code>onerror</code> runs JavaScript the moment it fires, e.g. an image that fails to load:</p>
         <pre>&lt;img src=x onerror="/* your JS here */"&gt;</pre>`,
       webapp: {
         height: 340,

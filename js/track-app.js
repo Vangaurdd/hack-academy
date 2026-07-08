@@ -2,7 +2,7 @@
   function params() { return new URLSearchParams(location.search); }
 
   function currentTrack() {
-    const id = params().get("t") || "recon";
+    const id = params().get("t") || "foundations";
     return HA.getTrack(id) || HA.allTracks()[0];
   }
 

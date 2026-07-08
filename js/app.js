@@ -2,10 +2,11 @@
   // ---------- boot sequence ----------
   const bootLines = [
     "academy@sandbox:~$ whoami",
-    "guest",
+    "guest — no experience on file",
     "academy@sandbox:~$ cat /etc/motto",
     '"Break it safely here, so you can break it responsibly out there."',
-    "academy@sandbox:~$ ./init --tracks=7 --levels=22",
+    "academy@sandbox:~$ ./init --tracks=8 --levels=31",
+    "[ok] foundations (start here)",
     "[ok] recon & footprinting",
     "[ok] injection",
     "[ok] cross-site scripting",

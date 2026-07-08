@@ -14,8 +14,10 @@ window.HACKACADEMY_TRACKS.injection = {
       tags: ["SQLi", "Auth Bypass"],
       type: "webapp",
       briefing: `
-        <p>Under the hood, this staff login builds its query with plain string concatenation — a
-        real, still-common anti-pattern:</p>
+        <p>Remember writing your first <code>SELECT ... FROM ... WHERE ...</code> query in
+        Foundations? Under the hood, this staff login builds that same shape of query by pasting
+        your input directly into the text — plain string concatenation, a real, still-common
+        anti-pattern:</p>
         <pre>SELECT * FROM users WHERE username='&lt;input&gt;' AND password='&lt;input&gt;'</pre>
         <p>If your input can close that quote early, you can rewrite the logic of the
         <code>WHERE</code> clause instead of just supplying a value for it. The sandbox has a

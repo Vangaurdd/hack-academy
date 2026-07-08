@@ -14,8 +14,9 @@ window.HACKACADEMY_TRACKS["csrf-ssrf"] = {
       tags: ["CSRF", "Session Riding"],
       type: "webapp",
       briefing: `
-        <p><strong>CSRF</strong> exploits ambient authority: browsers attach cookies to a request
-        automatically, regardless of which site the request actually came from. If a state-changing
+        <p><strong>CSRF</strong> exploits the cookie behavior from Foundations: browsers attach
+        cookies to a request automatically, regardless of which site the request actually came
+        from. If a state-changing
         endpoint has no CSRF token and doesn't check where the request originated, any page on the
         web can silently submit a form to it — and it'll ride on the victim's already-logged-in
         session.</p>

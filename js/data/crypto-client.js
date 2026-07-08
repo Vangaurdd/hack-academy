@@ -93,8 +93,10 @@ dragon</pre>
       type: "answer",
       briefing: `
         <p>A shockingly common finding: something labeled "encrypted" that's actually just
-        <strong>encoded</strong>. Encoding (Base64, hex, URL-encoding) is about representing data
-        safely in a given format — it is fully and trivially reversible by design, with no key or
+        <strong>encoded</strong>. You already met one encoding scheme in Foundations
+        (<code>%20</code>-style URL-encoding) — Base64 is another, same non-secret idea, just a
+        different alphabet. Encoding is about representing data safely in a given format — it is
+        fully and trivially reversible by design, with no key or
         secret involved. Encryption requires a key and is meant to resist reversal without one.
         Conflating the two is how "secure" tokens, IDs, and notes end up readable by anyone who
         knows to look.</p>
@@ -135,8 +137,9 @@ dragon</pre>
         <p>JavaScript objects inherit properties through a prototype chain, and every plain object
         shares the same root: <code>Object.prototype</code>. A naive recursive "merge" or "clone"
         utility — the kind hand-rolled in a lot of config-loading code — will happily walk into a
-        key literally named <code>__proto__</code> if it appears in attacker-controlled JSON, and
-        write straight onto that shared root. Do that, and the property shows up on
+        key literally named <code>__proto__</code> if it appears in attacker-controlled JSON (the
+        same curly-brace, quoted-key syntax from Foundations), and write straight onto that shared
+        root. Do that, and the property shows up on
         <strong>every plain object in the program</strong>, including ones that don't exist yet.</p>
         <p>Below is exactly that merge function, wired to a "save preferences" form. Try merging in
         a payload that adds an <code>isAdmin</code> property to <code>__proto__</code>.</p>`,

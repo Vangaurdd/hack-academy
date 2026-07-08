@@ -7,6 +7,8 @@
    that echoes what a *visitor* types goes through textContent.
    ============================================================ */
 
+window.__academySecret = "FLAG{devtools_console_basics}";
+
 const HA = (() => {
   const STORAGE_KEY = "hackacademy_progress_v1";
   const REGISTRY = window.HACKACADEMY_TRACKS || (window.HACKACADEMY_TRACKS = {});
