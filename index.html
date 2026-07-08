@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hack Academy — learn offensive security by breaking things on purpose</title>
+<meta name="description" content="A hands-on curriculum for web hacking and bug bounty skills: recon, injection, XSS, broken auth, CSRF/SSRF, and crypto mistakes — in sandboxed levels you exploit yourself." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%230b0e14%22/><text x=%2216%22 y=%2222%22 font-family=%22monospace%22 font-size=%2216%22 fill=%22%23e8a33d%22 text-anchor=%22middle%22>&gt;_</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+<nav class="topnav">
+  <div class="topnav-inner">
+    <a href="index.html" class="brand"><span class="brand-mark">&gt;_</span> Hack Academy</a>
+    <div class="nav-links">
+      <a href="#tracks">Tracks</a>
+      <a href="track.html?t=methodology">Methodology</a>
+      <a id="reset-link" href="#">Reset progress</a>
+      <a id="repo-link" href="https://github.com" target="_blank" rel="noopener">Source</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <section class="hero">
+    <div>
+      <span class="eyebrow">Offensive security curriculum</span>
+      <h1>Learn to hack by hacking something built to be hacked.</h1>
+      <p class="lede">Seven tracks, twenty-two hands-on levels. Break real vulnerability classes —
+        injection, XSS, broken auth, CSRF/SSRF, crypto mistakes — in sandboxes built for exactly
+        that, then carry the same instincts into methodology, tooling, and real bug bounty
+        programs.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="track.html?t=recon">Start with Recon &rarr;</a>
+        <a class="btn" href="track.html?t=methodology&l=method-1">Read the rules of engagement</a>
+      </div>
+    </div>
+    <div class="boot-screen">
+      <div class="boot-titlebar"><span class="boot-dot"></span><span class="boot-dot"></span><span class="boot-dot"></span></div>
+      <div class="boot-body" id="boot-body" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <div class="notice">
+    <strong>Scope, for the record:</strong> every target here is a sandboxed simulation running
+    entirely in your browser — nothing you do on this page touches a real network, real
+    infrastructure, or another person. That containment is also why it's honest with you about its
+    limits: it teaches the mechanics of each bug class, but real engagements need real (authorized)
+    targets. Track 7 tells you exactly where to go next. Never point anything you learn here at a
+    system you don't have explicit permission to test.
+  </div>
+
+  <div class="section-head" id="tracks">
+    <h2>Tracks</h2>
+    <span class="eyebrow" id="overall-progress"></span>
+  </div>
+  <div class="track-grid" id="track-grid"></div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    Hack Academy — a self-hosted, static training ground. Progress is stored only in your browser's
+    local storage; nothing is sent anywhere. Built for learning offensive security responsibly.
+  </div>
+</footer>
+
+<script src="js/engine.js"></script>
+<script src="js/data/recon.js"></script>
+<script src="js/data/injection.js"></script>
+<script src="js/data/xss.js"></script>
+<script src="js/data/auth.js"></script>
+<script src="js/data/csrf-ssrf.js"></script>
+<script src="js/data/crypto-client.js"></script>
+<script src="js/data/methodology.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
